@@ -1045,6 +1045,12 @@ class IImageAndFlowables(interfaces.IRMLDirectiveSignature):
         choices=('left', 'right'),
         required=False)
 
+    imageHref = attr.Text(
+        title='Link URL',
+        description='When specified, the image becomes a link to that URL.',
+        required=False)
+
+
 class ImageAndFlowables(Flowable):
     signature = IImageAndFlowables
     klass = reportlab.platypus.flowables.ImageAndFlowables
